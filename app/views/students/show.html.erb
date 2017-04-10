@@ -1,1 +1,9 @@
+Show Page
+
 <h1><%= @student.to_s %></h1>
+<%= @student.active_message %>
+
+Toggle activation:
+<%= form_tag "activate_student_path(@student)" , method: :get %>
+  <input type="submit" name="Activate" value="Activate">
+</form>
